@@ -101,7 +101,40 @@
                 <a class="primary-link" href="contests.html">Перейти к конкурсам <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
             </div>
         </section>
+        <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
+            <div class="container">
+                <div class="gallery-heading">
+                    <h2 id="gallery-title">Галерея</h2>
+                    <div class="gallery-controls" aria-label="Прокрутка галереи">
+                        <button type="button" class="icon-button" data-gallery-scroll="-1" aria-label="Предыдущие фотографии" title="Предыдущие фотографии" aria-controls="gallery-track" disabled><i data-lucide="arrow-left" aria-hidden="true"></i></button>
+                        <button type="button" class="icon-button" data-gallery-scroll="1" aria-label="Следующие фотографии" title="Следующие фотографии" aria-controls="gallery-track"><i data-lucide="arrow-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="gallery-track" id="gallery-track" tabindex="0" aria-label="Фотографии проекта">
+                    <!-- Add another image link here to extend the gallery. -->
+                    <a class="gallery-item" href="assets/gallery/planet-classroom.png" aria-haspopup="dialog" aria-controls="gallery-viewer"><img src="assets/gallery/planet-classroom.png" alt="Учебный зал будущего с большим глобусом" width="1254" height="1254" loading="lazy" decoding="async"></a>
+                    <a class="gallery-item" href="assets/gallery/towers-in-fog.png" aria-haspopup="dialog" aria-controls="gallery-viewer"><img src="assets/gallery/towers-in-fog.png" alt="Небоскребы с вечерней подсветкой в тумане" width="960" height="1280" loading="lazy" decoding="async"></a>
+                    <a class="gallery-item" href="assets/gallery/future-technology.png" aria-haspopup="dialog" aria-controls="gallery-viewer"><img src="assets/gallery/future-technology.png" alt="Образ технологий будущего: девушка в цифровых очках" width="1024" height="1024" loading="lazy" decoding="async"></a>
+                    <a class="gallery-item" href="assets/gallery/city-skyline.png" aria-haspopup="dialog" aria-controls="gallery-viewer"><img src="assets/gallery/city-skyline.png" alt="Панорама небоскребов Москва-Сити" width="1280" height="960" loading="lazy" decoding="async"></a>
+                    <a class="gallery-item" href="assets/gallery/space-flight.png" aria-haspopup="dialog" aria-controls="gallery-viewer"><img src="assets/gallery/space-flight.png" alt="Космический корабль над Землей" width="671" height="673" loading="lazy" decoding="async"></a>
+                    <a class="gallery-item" href="assets/gallery/lunar-base.png" aria-haspopup="dialog" aria-controls="gallery-viewer"><img src="assets/gallery/lunar-base.png" alt="Футуристичная исследовательская база на Луне" width="1024" height="1024" loading="lazy" decoding="async"></a>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="site-footer"><div class="container"><a class="footer-brand" href="#top">Развитие России на 100 лет</a><span>Будущее родного места</span><a href="#top" class="back-top">В начало <i data-lucide="arrow-up" aria-hidden="true"></i></a></div></footer>
+    <dialog id="gallery-viewer" class="gallery-viewer" aria-labelledby="gallery-viewer-title" aria-describedby="gallery-photo-caption">
+        <h2 id="gallery-viewer-title" class="visually-hidden">Галерея</h2>
+        <button class="dialog-close" type="button" data-close aria-label="Закрыть" title="Закрыть"><i data-lucide="x" aria-hidden="true"></i></button>
+        <div class="gallery-photo-frame"><img id="gallery-photo" alt=""></div>
+        <div class="gallery-viewer-footer">
+            <p id="gallery-photo-caption"></p>
+            <div class="gallery-viewer-controls">
+                <button type="button" class="icon-button" data-gallery-prev aria-label="Предыдущее фото" title="Предыдущее фото"><i data-lucide="chevron-left" aria-hidden="true"></i></button>
+                <span id="gallery-photo-count" aria-live="polite" aria-atomic="true"></span>
+                <button type="button" class="icon-button" data-gallery-next aria-label="Следующее фото" title="Следующее фото"><i data-lucide="chevron-right" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </dialog>
 </body>
 </html>
