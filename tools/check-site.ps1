@@ -3,7 +3,7 @@ $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 $indexPath = Join-Path $root 'index.html'
 $stylesPath = Join-Path $root 'styles.css'
-$backgroundPath = Join-Path $root 'assets\background.png'
+$backgroundPath = Join-Path $root 'assets\future-settlement.png'
 
 function Assert-True {
     param(
@@ -31,7 +31,9 @@ $eyebrowText = Utf8FromBase64 '0LjQvdGE0L7RgNC80LDRhtC40L7QvdC90YvQuSDQv9GA0L7Qt
 
 Assert-True (Test-Path -LiteralPath $indexPath) 'Missing index.html'
 Assert-True (Test-Path -LiteralPath $stylesPath) 'Missing styles.css'
-Assert-True (Test-Path -LiteralPath $backgroundPath) 'Missing assets/background.png'
+Assert-True (Test-Path -LiteralPath $backgroundPath) 'Missing contest background image'
+Assert-True (Test-Path -LiteralPath (Join-Path $root 'script.js')) 'Missing script.js'
+Assert-True (Test-Path -LiteralPath (Join-Path $root 'assets\lucide.min.js')) 'Missing local icon library'
 
 $html = Get-Content -LiteralPath $indexPath -Raw -Encoding UTF8
 $css = Get-Content -LiteralPath $stylesPath -Raw -Encoding UTF8
@@ -41,7 +43,7 @@ Assert-True ($html -match 'lang="ru"') 'index.html should use Russian language m
 Assert-True ($html.Contains($mainTitle)) 'Missing main title'
 Assert-True ($html.Contains($goalsTitle)) 'Missing goals section'
 Assert-True ($html.Contains($newsTitle)) 'Missing news section'
-Assert-True ($html.Contains($contestsTitle)) 'Missing contests section'
+Assert-True ($html -match 'id="contest"') 'Missing contest section'
 Assert-True (-not $html.ToLowerInvariant().Contains($eyebrowText)) 'Hero eyebrow text should be removed'
 Assert-True ($html.Contains($directionsLink)) 'Missing directions link text'
 Assert-True ($html -match 'href="#directions"') 'Directions link should target the directions section'
@@ -49,9 +51,20 @@ Assert-True ($html -match 'id="directions"') 'Missing directions target section'
 Assert-True ($html.Contains($directionsTitle)) 'Missing directions section title'
 Assert-True (([regex]::Matches($html, 'class="goal-item"')).Count -ge 8) 'Expected at least 8 goals'
 Assert-True (([regex]::Matches($html, 'class="[^"]*\bnews-card\b')).Count -ge 3) 'Expected at least 3 news cards'
-Assert-True ($css -match 'assets/background\.png') 'CSS should use the provided background image'
-Assert-True ($css -match '#fff|white|rgba\(255,\s*255,\s*255') 'CSS should include a white visual layer'
-Assert-True ($css -match '--paper:\s*rgba\(255,\s*255,\s*255,\s*0\.78\)') 'Panel white layer should be less opaque'
-Assert-True ($css -match 'linear-gradient\(90deg,\s*rgba\(255,\s*255,\s*255,\s*0\.84\),\s*rgba\(255,\s*255,\s*255,\s*0\.52\)\)') 'Page overlay should reveal more of the background image'
+Assert-True ($html -match 'id="jury"') 'Missing jury section'
+Assert-True ($html -match 'id="questions"') 'Missing questions section'
+
+$ids = [regex]::Matches($html, '\bid="([^"]+)"') | ForEach-Object { $_.Groups[1].Value }
+Assert-True (@($ids | Select-Object -Unique).Count -eq @($ids).Count) 'Duplicate HTML ids'
+foreach ($anchor in [regex]::Matches($html, 'href="#([^"]+)"')) {
+    Assert-True ($ids -contains $anchor.Groups[1].Value) ('Broken anchor: ' + $anchor.Value)
+}
+foreach ($trigger in [regex]::Matches($html, 'data-dialog="([^"]+)"')) {
+    $dialogId = [regex]::Escape($trigger.Groups[1].Value)
+    Assert-True ($html -match ('<dialog id="' + $dialogId + '"')) ('Missing dialog: ' + $dialogId)
+}
+foreach ($resource in [regex]::Matches($html, '(?:src|href)="([^"#]+)"')) {
+    Assert-True (Test-Path -LiteralPath (Join-Path $root $resource.Groups[1].Value)) ('Missing local asset: ' + $resource.Groups[1].Value)
+}
 
 'site checks passed'
