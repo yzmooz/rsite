@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Развитие России на 100 лет: цели проекта, новости и творческие конкурсы. Представьте город, поселок или деревню будущего.">
+    <meta name="description" content="Развитие России на 100 лет: цели проекта, новости и творческие конкурсы.">
     <meta name="theme-color" content="#1649b5">
     <title>Развитие России на 100 лет</title>
     <link rel="stylesheet" href="styles.css">
@@ -19,7 +19,7 @@
                 <span>Развитие России<br>на 100 лет</span>
             </a>
             <nav aria-label="Основная навигация">
-                <a href="#project">О проекте</a><a href="#goals">Цели</a><a href="#news">Новости</a><a href="#contests">Конкурсы</a>
+                <a href="#project" aria-current="page">О проекте</a><a href="#goals">Цели</a><a href="#news">Новости</a><a href="contests.html">Конкурсы</a>
             </nav>
         </div>
     </header>
@@ -58,108 +58,10 @@
         <section class="contest-entry" aria-labelledby="contests-entry-title">
             <div class="container">
                 <div><h2 id="contests-entry-title">Конкурсы</h2><p>Город, поселок, деревня через 100 лет: рисунок и описание вашего будущего.</p></div>
-                <a class="primary-link" href="#contests">Перейти к конкурсам <i data-lucide="arrow-down" aria-hidden="true"></i></a>
-            </div>
-        </section>
-        <section class="contest-hero" id="contests" aria-labelledby="contest-hero-title">
-            <img class="hero-image" src="assets/future-settlement.png" alt="Город будущего на берегу реки: белые башни с синим остеклением, зеленые террасы и дома с солнечными крышами" loading="lazy" width="1672" height="941">
-            <div class="hero-inner">
-                <p class="overline">Творческий конкурс</p>
-                <h2 id="contest-hero-title">Город, поселок,<br>деревня<br><span>через 100 лет</span></h2>
-                <p class="hero-description">Представьте будущее родного места.<br>Нарисуйте его и расскажите свою историю.</p>
-                <a class="primary-link" href="#contest">О конкурсе <i data-lucide="arrow-down" aria-hidden="true"></i></a>
-                <p class="hero-format"><i data-lucide="image" aria-hidden="true"></i> Рисунок <span>+</span> <i data-lucide="file-text" aria-hidden="true"></i> Описание</p>
-            </div>
-        </section>
-
-        <section class="section contest-intro" id="contest" aria-labelledby="contest-title">
-            <div class="container intro-grid">
-                <div><p class="overline">Конкурс</p><h2 id="contest-title">Будущее начинается<br>с вашей идеи</h2></div>
-                <div class="intro-copy">
-                    <p>Как изменится место, где вы живете, через сто лет? Какими станут дома, улицы, транспорт и природа рядом с нами?</p>
-                    <p>Создайте рисунок города, поселка или деревни будущего и дополните его описанием. Покажите не только новые здания, но и жизнь людей: что они ценят, как общаются и заботятся о своем доме.</p>
-                    <div class="format-line"><span>Одна идея</span><span>Рисунок</span><span>Описание к рисунку</span></div>
-                    <a href="#directions" class="inline-link">Посмотреть направления <i data-lucide="arrow-down-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-        </section>
-        <section class="section directions-section" id="directions" aria-labelledby="directions-title">
-            <div class="container">
-                <div class="section-top"><div><p class="overline">Ваша тема</p><h2 id="directions-title">Направления конкурсов</h2></div><p>Три масштаба.<br>Один взгляд в будущее.</p></div>
-                <div class="topic-grid">
-                    <button class="topic-card topic-city" type="button" data-dialog="city-dialog" aria-haspopup="dialog" aria-controls="city-dialog">
-                        <span class="topic-icon"><i data-lucide="building-2" aria-hidden="true"></i></span><span class="topic-number">01</span><span class="topic-name">Город</span><span class="topic-caption">Новый ритм большой жизни</span><span class="card-link">Подробнее <i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
-                    </button>
-                    <button class="topic-card topic-town" type="button" data-dialog="town-dialog" aria-haspopup="dialog" aria-controls="town-dialog">
-                        <span class="topic-icon"><i data-lucide="house" aria-hidden="true"></i></span><span class="topic-number">02</span><span class="topic-name">Поселок</span><span class="topic-caption">Технологии ближе к человеку</span><span class="card-link">Подробнее <i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
-                    </button>
-                    <button class="topic-card topic-village" type="button" data-dialog="village-dialog" aria-haspopup="dialog" aria-controls="village-dialog">
-                        <span class="topic-icon"><i data-lucide="trees" aria-hidden="true"></i></span><span class="topic-number">03</span><span class="topic-name">Деревня</span><span class="topic-caption">Природа, традиции, новые идеи</span><span class="card-link">Подробнее <i data-lucide="arrow-up-right" aria-hidden="true"></i></span>
-                    </button>
-                </div>
-            </div>
-        </section>
-        <section class="section questions-section" id="questions" aria-labelledby="questions-title">
-            <div class="container">
-                <div class="section-top"><div><p class="overline">Подготовка работы</p><h2 id="questions-title">Вопросы о конкурсе</h2></div></div>
-                <div class="question-grid">
-                    <button class="question-card" type="button" data-dialog="drawing-dialog" aria-haspopup="dialog" aria-controls="drawing-dialog"><span class="question-number">01</span><span class="question-name">Что должно быть<br>на рисунке?</span><span class="card-link">Подробнее <i data-lucide="plus" aria-hidden="true"></i></span></button>
-                    <button class="question-card" type="button" data-dialog="description-dialog" aria-haspopup="dialog" aria-controls="description-dialog"><span class="question-number">02</span><span class="question-name">О чем написать<br>в описании?</span><span class="card-link">Подробнее <i data-lucide="plus" aria-hidden="true"></i></span></button>
-                    <button class="question-card" type="button" data-dialog="submission-dialog" aria-haspopup="dialog" aria-controls="submission-dialog"><span class="question-number">03</span><span class="question-name">Как отправить<br>работу?</span><span class="card-link">Подробнее <i data-lucide="plus" aria-hidden="true"></i></span></button>
-                </div>
-                <p class="participation-note">Сроки, порядок отправки и подробные условия участия будут опубликованы здесь.</p>
-            </div>
-        </section>
-        <section class="section jury-section" id="jury" aria-labelledby="jury-title">
-            <div class="container"><p class="overline">Экспертный взгляд</p><h2 id="jury-title">Члены жюри</h2>
-                <div class="jury-grid" aria-label="Состав жюри пока не опубликован">
-                    <!-- Add jury names and portraits after the composition is approved. -->
-                    <div class="jury-slot" aria-hidden="true"></div><div class="jury-slot" aria-hidden="true"></div><div class="jury-slot" aria-hidden="true"></div><div class="jury-slot" aria-hidden="true"></div>
-                </div>
+                <a class="primary-link" href="contests.html">Перейти к конкурсам <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
             </div>
         </section>
     </main>
     <footer class="site-footer"><div class="container"><a class="footer-brand" href="#top">Развитие России на 100 лет</a><span>Будущее родного места</span><a href="#top" class="back-top">В начало <i data-lucide="arrow-up" aria-hidden="true"></i></a></div></footer>
-    <dialog id="city-dialog" aria-labelledby="city-title">
-        <button class="dialog-close" type="button" data-close aria-label="Закрыть"><i data-lucide="x" aria-hidden="true"></i></button>
-        <span class="dialog-icon"><i data-lucide="building-2" aria-hidden="true"></i></span><p class="overline">Направление / Город</p><h2 id="city-title">Город через 100 лет</h2>
-        <p>Представьте город, в котором технологии помогают людям, а общественные пространства объединяют их.</p>
-        <ul><li>Какими станут дома, улицы и районы?</li><li>Как будут передвигаться жители?</li><li>Где люди будут учиться, работать и отдыхать?</li><li>Как город сохранит чистый воздух, воду и зеленые зоны?</li></ul>
-        <p class="dialog-note">Покажите вашу идею на рисунке и объясните, что делает этот город особенным.</p>
-    </dialog>
-    <dialog id="town-dialog" aria-labelledby="town-title">
-        <button class="dialog-close" type="button" data-close aria-label="Закрыть"><i data-lucide="x" aria-hidden="true"></i></button>
-        <span class="dialog-icon"><i data-lucide="house" aria-hidden="true"></i></span><p class="overline">Направление / Поселок</p><h2 id="town-title">Поселок через 100 лет</h2>
-        <p>Представьте уютное место, где современные возможности доступны рядом с домом.</p>
-        <ul><li>Как будут выглядеть дома и общие пространства?</li><li>Что свяжет поселок с другими населенными пунктами?</li><li>Где будут расположены школы, места работы и отдыха?</li><li>Как новые технологии улучшат повседневную жизнь?</li></ul>
-        <p class="dialog-note">Нарисуйте поселок и расскажите о жизни его жителей.</p>
-    </dialog>
-    <dialog id="village-dialog" aria-labelledby="village-title">
-        <button class="dialog-close" type="button" data-close aria-label="Закрыть"><i data-lucide="x" aria-hidden="true"></i></button>
-        <span class="dialog-icon"><i data-lucide="trees" aria-hidden="true"></i></span><p class="overline">Направление / Деревня</p><h2 id="village-title">Деревня через 100 лет</h2>
-        <p>Представьте деревню, в которой природа и традиции встречаются с новыми возможностями.</p>
-        <ul><li>Какими станут дома, дворы и хозяйства?</li><li>Как жители будут выращивать продукты и получать энергию?</li><li>Что сохранится из местных традиций?</li><li>Как деревня будет заботиться о природе вокруг?</li></ul>
-        <p class="dialog-note">Создайте рисунок и опишите, как будет устроена жизнь в вашей деревне будущего.</p>
-    </dialog>
-    <dialog id="drawing-dialog" aria-labelledby="drawing-title">
-        <button class="dialog-close" type="button" data-close aria-label="Закрыть"><i data-lucide="x" aria-hidden="true"></i></button>
-        <span class="dialog-icon"><i data-lucide="image" aria-hidden="true"></i></span><p class="overline">Вопрос / Рисунок</p><h2 id="drawing-title">Что должно быть на рисунке?</h2>
-        <p>Ваше видение города, поселка или деревни через 100 лет. Можно показать панораму, улицу, площадь, двор или другое место, через которое раскрывается ваша идея.</p>
-        <ul><li>Продумайте, как место изменится за сто лет.</li><li>Добавьте детали: транспорт, природу, дома и пространства для людей.</li><li>Покажите связь между архитектурой и повседневной жизнью.</li></ul>
-        <p class="dialog-note">Требования к технике, размеру и формату работы будут опубликованы в условиях конкурса.</p>
-    </dialog>
-    <dialog id="description-dialog" aria-labelledby="description-title">
-        <button class="dialog-close" type="button" data-close aria-label="Закрыть"><i data-lucide="x" aria-hidden="true"></i></button>
-        <span class="dialog-icon"><i data-lucide="file-text" aria-hidden="true"></i></span><p class="overline">Вопрос / Описание</p><h2 id="description-title">О чем написать в описании?</h2>
-        <p>Помогите зрителю понять ваш рисунок. Расскажите о месте, его жителях и изменениях, которые вы представили.</p>
-        <ul><li>Как называется ваша работа и какое место изображено?</li><li>Что изменилось через 100 лет, а что сохранилось?</li><li>Как работают новые технологии и как они помогают людям?</li><li>Почему вы хотели бы жить в таком месте?</li></ul>
-        <p class="dialog-note">Требования к объему описания будут опубликованы вместе с условиями участия.</p>
-    </dialog>
-    <dialog id="submission-dialog" aria-labelledby="submission-title">
-        <button class="dialog-close" type="button" data-close aria-label="Закрыть"><i data-lucide="x" aria-hidden="true"></i></button>
-        <span class="dialog-icon"><i data-lucide="send" aria-hidden="true"></i></span><p class="overline">Вопрос / Участие</p><h2 id="submission-title">Как отправить работу?</h2>
-        <p>Способ отправки работ и даты приема пока не опубликованы.</p><p>Подготовьте рисунок и описание к нему. Порядок подачи, требования к файлам и сведениям об авторе появятся на этой странице вместе с подробными условиями конкурса.</p>
-    </dialog>
-    <noscript><p class="no-script">Рисунок и описание города, поселка или деревни через 100 лет. Сроки и способ отправки работ будут опубликованы здесь. Для просмотра подробностей в карточках включите JavaScript.</p></noscript>
 </body>
 </html>
