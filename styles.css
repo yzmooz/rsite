@@ -40,8 +40,23 @@ nav a:hover { color: var(--blue); }
 .contest-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(255, 255, 255, .88) 0%, rgba(255, 255, 255, .6) 32%, rgba(255, 255, 255, .04) 64%); }
 .hero-inner { padding-block: 54px; }
 .contest-hero .overline { color: var(--ink); margin-bottom: 23px; }
-h1 { font-size: 68px; line-height: 1.04; font-weight: 800; max-width: 660px; margin-bottom: 24px; }
-h1 span { color: var(--blue); }
+h1, .contest-hero h2 { font-size: 68px; line-height: 1.04; font-weight: 800; max-width: 660px; margin-bottom: 24px; }
+.contest-hero h2 span { color: var(--blue); }
+.project-home { background: linear-gradient(90deg, rgba(255, 255, 255, .9), rgba(255, 255, 255, .7)), url("assets/background.png") center / cover; }
+.home-hero { padding-block: 58px 42px; border-bottom: 1px solid #13263f33; }
+.home-hero h1 { max-width: 900px; font-size: 56px; line-height: 1.1; }
+.home-hero > p { max-width: 700px; color: var(--muted); font-size: 18px; line-height: 1.6; margin: 0; }
+.home-information { padding-block: 32px 54px; }
+.project-home .goals-panel { padding: 28px; background: #ffffffdc; border: 1px solid #13263f22; border-radius: 6px; }
+.project-home .news-panel { padding-top: 28px; }
+.project-home .news-card { background: #ffffffdc; }
+.project-home .dashboard { gap: 28px; }
+.project-home .section-heading h2 { font-size: 25px; line-height: 1.2; margin: 0; }
+.contest-entry { border-block: 1px solid var(--line); padding-block: 38px; }
+.contest-entry .container { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.contest-entry h2 { font-size: 30px; margin-bottom: 12px; }
+.contest-entry p { font-size: 16px; line-height: 1.6; color: var(--muted); margin: 0; max-width: 620px; }
+.contest-entry .primary-link { flex-shrink: 0; }
 .hero-description { font-size: 18px; line-height: 1.6; max-width: 520px; margin-bottom: 26px; }
 .primary-link { display: inline-flex; align-items: center; gap: 30px; background: var(--red); color: #fff; padding: 16px 23px; min-height: 54px; border-radius: 4px; font-weight: 700; }
 .primary-link:hover { background: #b91e2b; }
@@ -79,8 +94,6 @@ h1 span { color: var(--blue); }
 .jury-section { border-top: 1px solid var(--line); background: #f8f9fb; }
 .jury-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
 .jury-slot { aspect-ratio: 4 / 3; border: 1px dashed #cbd4e1; background: #f0f2f6; border-radius: 4px; }
-.project-section { border-top: 4px solid var(--red); }
-.project-heading { margin-bottom: 50px; }
 .dashboard { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 48px; }
 .section-heading { display: flex; align-items: center; gap: 12px; padding-bottom: 18px; border-bottom: 1px solid var(--line); margin-bottom: 18px; }
 .section .section-heading h2 { font-size: 23px; margin: 0; }
@@ -112,12 +125,12 @@ dialog ul { padding-left: 23px; }
 dialog li { padding-left: 5px; margin-bottom: 8px; }
 .dialog-note { border-top: 1px solid var(--line); padding-top: 20px; margin-top: 24px; margin-bottom: 0; color: var(--muted); }
 .no-script { padding: 30px; }
-@media (min-width: 1600px) { h1 { font-size: 78px; } }
+@media (min-width: 1600px) { .contest-hero h2 { font-size: 78px; } }
 @media (max-width: 1100px) {
     .container, .header-inner, .hero-inner { width: calc(100% - 48px); }
     nav { gap: 17px; }
     .brand { font-size: 13px; }
-    h1 { font-size: 60px; }
+    .contest-hero h2 { font-size: 60px; }
     .intro-grid { gap: 40px; }
     .section h2 { font-size: 34px; }
     .topic-card { padding: 22px; }
@@ -140,6 +153,8 @@ dialog li { padding-left: 5px; margin-bottom: 8px; }
     .question-name { font-size: 20px; }
     .jury-grid { gap: 16px; }
     .hero-description { max-width: 400px; }
+    .home-hero h1 { font-size: 46px; }
+    .contest-entry .container { align-items: flex-start; flex-direction: column; gap: 22px; }
 }
 @media (max-width: 600px) {
     .container, .header-inner, .hero-inner { width: calc(100% - 36px); }
@@ -151,7 +166,14 @@ dialog li { padding-left: 5px; margin-bottom: 8px; }
     .hero-inner { padding: 44px 0 40px; }
     .hero-image { object-position: 64% center; }
     .contest-hero::after { background: rgba(255, 255, 255, .73); }
-    h1 { font-size: 42px; max-width: 370px; }
+    .contest-hero h2 { font-size: 42px; max-width: 370px; }
+    .home-hero { padding-block: 36px 28px; }
+    .home-hero h1 { font-size: 36px; }
+    .home-hero > p { font-size: 16px; }
+    .home-information { padding-block: 24px 36px; }
+    .project-home .goals-panel { padding: 20px; }
+    .project-home .section-heading h2 { font-size: 22px; }
+    .project-home .news-panel { padding-top: 12px; }
     .hero-description { font-size: 16px; }
     .contest-hero .overline { margin-bottom: 18px; }
     .primary-link { padding: 14px 20px; }
@@ -176,7 +198,8 @@ dialog li { padding-left: 5px; margin-bottom: 8px; }
     dialog p, dialog li { font-size: 16px; }
 }
 @media (max-width: 370px) {
-    h1 { font-size: 34px; margin-bottom: 18px; }
+    .contest-hero h2 { font-size: 34px; margin-bottom: 18px; }
+    .home-hero h1 { font-size: 32px; }
     .hero-inner { padding: 28px 0; }
     .hero-description { font-size: 15px; margin-bottom: 20px; }
     .hero-format { margin-top: 20px; }

@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Творческий конкурс проекта «Развитие России на 100 лет». Рисунок и описание города, поселка или деревни будущего.">
+    <meta name="description" content="Развитие России на 100 лет: цели проекта, новости и творческие конкурсы. Представьте город, поселок или деревню будущего.">
     <meta name="theme-color" content="#1649b5">
-    <title>Город, поселок, деревня через 100 лет | Развитие России на 100 лет</title>
+    <title>Развитие России на 100 лет</title>
     <link rel="stylesheet" href="styles.css">
     <script src="assets/lucide.min.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <a class="skip-link" href="#contest">Перейти к содержанию</a>
+    <a class="skip-link" href="#project">Перейти к содержанию</a>
     <header class="site-header">
         <div class="header-inner">
             <a class="brand" href="#top" aria-label="Развитие России на 100 лет, в начало страницы">
@@ -19,16 +19,53 @@
                 <span>Развитие России<br>на 100 лет</span>
             </a>
             <nav aria-label="Основная навигация">
-                <a href="#contest">Конкурс</a><a href="#directions">Направления</a><a href="#questions">Вопросы</a><a href="#jury">Члены жюри</a><a href="#project">О проекте</a>
+                <a href="#project">О проекте</a><a href="#goals">Цели</a><a href="#news">Новости</a><a href="#contests">Конкурсы</a>
             </nav>
         </div>
     </header>
     <main id="top">
-        <section class="contest-hero" aria-labelledby="page-title">
-            <img class="hero-image" src="assets/future-settlement.png" alt="Город будущего на берегу реки: белые башни с синим остеклением, зеленые террасы и дома с солнечными крышами" fetchpriority="high" width="1672" height="941">
+        <section class="project-home" id="project" aria-labelledby="page-title">
+            <div class="container home-hero">
+                <h1 id="page-title">Развитие России на 100 лет</h1>
+                <p>Долгосрочное развитие страны: технологии, образование, инфраструктура и качество жизни.</p>
+            </div>
+            <div class="container home-information">
+                <div class="dashboard" aria-label="Основная информация">
+                    <article class="goals-panel panel" id="goals">
+                        <div class="section-heading"><h2>Цели национального проекта</h2></div>
+                        <ol class="goals-list">
+                            <li class="goal-item"><span class="goal-index">1</span><p>Укрепление технологической независимости и развитие собственной инженерной школы.</p></li>
+                            <li class="goal-item"><span class="goal-index">2</span><p>Обновление транспортной, цифровой и энергетической инфраструктуры регионов.</p></li>
+                            <li class="goal-item"><span class="goal-index">3</span><p>Рост качества образования, науки и прикладных исследовательских центров.</p></li>
+                            <li class="goal-item"><span class="goal-index">4</span><p>Поддержка современной промышленности, роботизации и высокоточного производства.</p></li>
+                            <li class="goal-item"><span class="goal-index">5</span><p>Развитие медицины, профилактики и доступных сервисов для людей старшего возраста.</p></li>
+                            <li class="goal-item"><span class="goal-index">6</span><p>Создание комфортной городской среды с зелеными зонами и безопасными общественными пространствами.</p></li>
+                            <li class="goal-item"><span class="goal-index">7</span><p>Расширение программ для молодежи, предпринимательства, спорта и творческих инициатив.</p></li>
+                            <li class="goal-item"><span class="goal-index">8</span><p>Сохранение культурного наследия и развитие туристических маршрутов по всей стране.</p></li>
+                        </ol>
+                    </article>
+                    <aside class="news-panel" id="news" aria-labelledby="news-title">
+                        <div class="section-heading"><h2 id="news-title">Новости</h2></div>
+                        <div class="news-grid">
+                            <article class="news-card"><span class="news-date">июнь 2026</span><h3>Новый центр компетенций</h3><p>Открыта площадка для проектных команд, инженерных кружков и наставников.</p></article>
+                            <article class="news-card"><span class="news-date">проект</span><h3>Региональные инициативы</h3><p>Собираются предложения по развитию городских сервисов и общественных пространств.</p></article>
+                            <article class="news-card news-card-wide"><span class="news-date">анонс</span><h3>Форум будущего</h3><p>Планируется серия встреч о технологиях, образовании, экологии и экономике ближайших десятилетий.</p></article>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+        <section class="contest-entry" aria-labelledby="contests-entry-title">
+            <div class="container">
+                <div><h2 id="contests-entry-title">Конкурсы</h2><p>Город, поселок, деревня через 100 лет: рисунок и описание вашего будущего.</p></div>
+                <a class="primary-link" href="#contests">Перейти к конкурсам <i data-lucide="arrow-down" aria-hidden="true"></i></a>
+            </div>
+        </section>
+        <section class="contest-hero" id="contests" aria-labelledby="contest-hero-title">
+            <img class="hero-image" src="assets/future-settlement.png" alt="Город будущего на берегу реки: белые башни с синим остеклением, зеленые террасы и дома с солнечными крышами" loading="lazy" width="1672" height="941">
             <div class="hero-inner">
                 <p class="overline">Творческий конкурс</p>
-                <h1 id="page-title">Город, поселок,<br>деревня<br><span>через 100 лет</span></h1>
+                <h2 id="contest-hero-title">Город, поселок,<br>деревня<br><span>через 100 лет</span></h2>
                 <p class="hero-description">Представьте будущее родного места.<br>Нарисуйте его и расскажите свою историю.</p>
                 <a class="primary-link" href="#contest">О конкурсе <i data-lucide="arrow-down" aria-hidden="true"></i></a>
                 <p class="hero-format"><i data-lucide="image" aria-hidden="true"></i> Рисунок <span>+</span> <i data-lucide="file-text" aria-hidden="true"></i> Описание</p>
@@ -80,79 +117,6 @@
                     <div class="jury-slot" aria-hidden="true"></div><div class="jury-slot" aria-hidden="true"></div><div class="jury-slot" aria-hidden="true"></div><div class="jury-slot" aria-hidden="true"></div>
                 </div>
             </div>
-        </section>
-        <section class="section project-section" id="project" aria-labelledby="project-title">
-        <div class="container">
-        <div class="project-heading"><p class="overline">О проекте</p><h2 id="project-title">Развитие России на 100 лет</h2></div>
-        <div class="dashboard" aria-label="Основная информация">
-            <article class="goals-panel panel">
-                <div class="section-heading">
-                    <span class="section-number">01</span>
-                    <h2>Цели национального проекта</h2>
-                </div>
-
-                <ol class="goals-list">
-                    <li class="goal-item">
-                        <span class="goal-index">1</span>
-                        <p>Укрепление технологической независимости и развитие собственной инженерной школы.</p>
-                    </li>
-                    <li class="goal-item">
-                        <span class="goal-index">2</span>
-                        <p>Обновление транспортной, цифровой и энергетической инфраструктуры регионов.</p>
-                    </li>
-                    <li class="goal-item">
-                        <span class="goal-index">3</span>
-                        <p>Рост качества образования, науки и прикладных исследовательских центров.</p>
-                    </li>
-                    <li class="goal-item">
-                        <span class="goal-index">4</span>
-                        <p>Поддержка современной промышленности, роботизации и высокоточного производства.</p>
-                    </li>
-                    <li class="goal-item">
-                        <span class="goal-index">5</span>
-                        <p>Развитие медицины, профилактики и доступных сервисов для людей старшего возраста.</p>
-                    </li>
-                    <li class="goal-item">
-                        <span class="goal-index">6</span>
-                        <p>Создание комфортной городской среды с зелеными зонами и безопасными общественными пространствами.</p>
-                    </li>
-                    <li class="goal-item">
-                        <span class="goal-index">7</span>
-                        <p>Расширение программ для молодежи, предпринимательства, спорта и творческих инициатив.</p>
-                    </li>
-                    <li class="goal-item">
-                        <span class="goal-index">8</span>
-                        <p>Сохранение культурного наследия и развитие туристических маршрутов по всей стране.</p>
-                    </li>
-                </ol>
-            </article>
-
-            <aside class="news-panel" aria-labelledby="news-title">
-                <div class="section-heading compact">
-                    <span class="section-number">02</span>
-                    <h2 id="news-title">Новости</h2>
-                </div>
-
-                <div class="news-grid">
-                    <article class="news-card">
-                        <span class="news-date">июнь 2026</span>
-                        <h3>Новый центр компетенций</h3>
-                        <p>Открыта площадка для проектных команд, инженерных кружков и наставников.</p>
-                    </article>
-                    <article class="news-card">
-                        <span class="news-date">проект</span>
-                        <h3>Региональные инициативы</h3>
-                        <p>Собираются предложения по развитию городских сервисов и общественных пространств.</p>
-                    </article>
-                    <article class="news-card news-card-wide">
-                        <span class="news-date">анонс</span>
-                        <h3>Форум будущего</h3>
-                        <p>Планируется серия встреч о технологиях, образовании, экологии и экономике ближайших десятилетий.</p>
-                    </article>
-                </div>
-            </aside>
-        </div>
-        </div>
         </section>
     </main>
     <footer class="site-footer"><div class="container"><a class="footer-brand" href="#top">Развитие России на 100 лет</a><span>Будущее родного места</span><a href="#top" class="back-top">В начало <i data-lucide="arrow-up" aria-hidden="true"></i></a></div></footer>
