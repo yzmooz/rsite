@@ -99,9 +99,16 @@ h1, .contest-hero h1 { font-size: 68px; line-height: 1.04; font-weight: 800; max
 .section .section-heading h2 { font-size: 23px; margin: 0; }
 .section-number { color: var(--blue); font-size: 12px; font-weight: 700; }
 .goals-list { list-style: none; padding: 0; margin: 0; }
-.goal-item { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 14px; padding: 17px 0; border-bottom: 1px solid var(--line); }
+.goal-item { border-bottom: 1px solid var(--line); }
+.goal-item summary { display: grid; grid-template-columns: 28px minmax(0, 1fr) 22px; gap: 14px; align-items: center; padding: 17px 0; cursor: pointer; list-style: none; }
+.goal-item summary::-webkit-details-marker { display: none; }
 .goal-index { font-size: 13px; color: var(--blue); line-height: 1.6; }
-.goal-item p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted); }
+.goal-title { font-size: 15px; line-height: 1.6; color: var(--ink); }
+.goal-item summary:hover .goal-title, .goal-item details[open] .goal-title { color: var(--blue); }
+.goal-chevron { color: var(--blue); }
+.goal-item details[open] .goal-chevron { transform: rotate(180deg); }
+.goal-description { padding: 0 0 20px 42px; }
+.goal-description p { margin: 0; font-size: 15px; line-height: 1.7; color: var(--muted); }
 .news-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .news-card { border: 1px solid var(--line); padding: 20px; border-radius: 4px; }
 .news-card-wide { grid-column: 1 / -1; }
